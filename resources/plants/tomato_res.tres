@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlantResource" format=3 uid="uid://bijjkoavovkhv"]
+
+[ext_resource type="Script" uid="uid://ds2whfk07n2f1" path="res://src/resources/plant_res.gd" id="1_jts61"]
+[ext_resource type="Texture2D" uid="uid://cvl6fnsvy7ym5" path="res://graphics/icons/Untitled1150_20260327204945.png" id="2_1tm40"]
+
+[resource]
+script = ExtResource("1_jts61")
+texture = ExtResource("2_1tm40")
+metadata/_custom_type_script = "uid://ds2whfk07n2f1"

@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bxxfixkra5ad"]
+
+[ext_resource type="Script" uid="uid://hdlmepm133ui" path="res://src/Dialog/dialog_ui.gd" id="1_tubdg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmeh0"]
+bg_color = Color(0.85601497, 0.4789492, 0.42363077, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9882353, 0.47843137, 0.42352942, 1)
+
+[node name="DialogUI" type="Control" unique_id=203361439]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tubdg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1017794543]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=670102766]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -264.0
+offset_right = -17.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmeh0")
+
+[node name="DialogBox" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=2049466378]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="DialogSpeaker" type="Label" parent="CanvasLayer/Panel/DialogBox" unique_id=2139715367]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9742219, 0.77247226, 0.87126017, 1)
+theme_override_font_sizes/font_size = 30
+text = "Grandma
+"
+
+[node name="DialogText" type="Label" parent="CanvasLayer/Panel/DialogBox" unique_id=1332092963]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 28
+text = "Dialog Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogOptions" type="HBoxContainer" parent="CanvasLayer/Panel/DialogBox" unique_id=1944969591]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Panel" unique_id=1907847469]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -36.0
+offset_top = 1.0
+offset_bottom = 37.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "X"

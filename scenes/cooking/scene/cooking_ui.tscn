@@ -1,0 +1,643 @@
+[gd_scene format=3 uid="uid://c07senjmb8n34"]
+
+[ext_resource type="Texture2D" uid="uid://cqjw10fbavcr5" path="res://graphics/cooking/Bg/IMG_8867.PNG" id="1_b4kwo"]
+[ext_resource type="Script" uid="uid://dm8pxex3g3ydn" path="res://scenes/cooking/script/cooking_ui.gd" id="1_cybs6"]
+[ext_resource type="PackedScene" uid="uid://ckeawllbv84bk" path="res://scenes/cooking/scene/cooking_dialogue.tscn" id="2_8jbwo"]
+[ext_resource type="PackedScene" uid="uid://cxc7scsx24xea" path="res://scenes/cooking/scene/laddle.tscn" id="2_cjdud"]
+[ext_resource type="Texture2D" uid="uid://crejtcqhjlcag" path="res://graphics/cooking/Stove/Stove cool.png" id="2_kac3s"]
+[ext_resource type="Script" uid="uid://c3j2slls3qbxe" path="res://scenes/cooking/script/ingredient_spawner.gd" id="3_8dkaq"]
+[ext_resource type="Texture2D" uid="uid://c0v3u27s4g0ph" path="res://graphics/cooking/Ingredients /sugar_bowl.png" id="6_hccjc"]
+[ext_resource type="PackedScene" uid="uid://dgbbysnsr2mmq" path="res://scenes/cooking/scene/pot_zone.tscn" id="7_b7h0w"]
+[ext_resource type="Texture2D" uid="uid://fehbsqmi3sko" path="res://graphics/cooking/Bg/Button.png" id="7_bay3k"]
+[ext_resource type="Texture2D" uid="uid://bdcogkx0tbvr0" path="res://graphics/cooking/Pots/Pot back.png" id="7_jmptp"]
+[ext_resource type="PackedScene" uid="uid://dfxqtcsrehd88" path="res://scenes/cooking/scene/drag_source.tscn" id="9_jbwc3"]
+[ext_resource type="Texture2D" uid="uid://hyaqa8pfuy2n" path="res://graphics/cooking/Ingredients /coconut_milk_bowl.png" id="12_jbwc3"]
+[ext_resource type="Script" uid="uid://bn52r62eo8cid" path="res://scenes/cooking/script/done_canvas.gd" id="14_puotp"]
+[ext_resource type="Texture2D" uid="uid://hy3o6or88yjv" path="res://graphics/cooking/Pots/Pot front cool.png" id="15_8dkaq"]
+[ext_resource type="Texture2D" uid="uid://wvbpmcko8vn1" path="res://graphics/cooking/4.png" id="15_8jbwo"]
+[ext_resource type="Script" uid="uid://cnc4vravehccb" path="res://scenes/cooking/script/banana_zone.gd" id="16_k6lov"]
+[ext_resource type="Texture2D" uid="uid://bd0iyvtv7g05f" path="res://graphics/cooking/Stages of dodol/10.png" id="16_w2yrx"]
+[ext_resource type="Script" uid="uid://dqiy8dcfw5wuo" path="res://scenes/cooking/script/laddle_with_dodol.gd" id="17_puotp"]
+[ext_resource type="Texture2D" uid="uid://pyx21x00oqbk" path="res://graphics/cooking/Tools/Untitled1156_20260331122358.png" id="19_k6lov"]
+[ext_resource type="Texture2D" uid="uid://gbmwt0nu2naf" path="res://graphics/cooking/1.png" id="20_bay3k"]
+[ext_resource type="Script" uid="uid://c6emg0t4fx2r2" path="res://scenes/cooking/script/fold_dodol.gd" id="21_p2gep"]
+[ext_resource type="Texture2D" uid="uid://ouppc4ob6hou" path="res://graphics/cooking/Tools/Untitled1161_20260331014907.png" id="22_xk7km"]
+[ext_resource type="Script" uid="uid://d0iexa1j5knxj" path="res://scenes/cooking/script/knife.gd" id="23_cij8f"]
+[ext_resource type="Script" uid="uid://cajumchslmrrl" path="res://scenes/cooking/script/cut_zone.gd" id="24_dd0j8"]
+[ext_resource type="Script" uid="uid://st6l1ry2px11" path="res://scenes/cooking/script/dodol_serve_canvas.gd" id="25_nev20"]
+[ext_resource type="Texture2D" uid="uid://u825c4b7d2nf" path="res://graphics/icons/Dodol.png" id="26_j3wvt"]
+[ext_resource type="Texture2D" uid="uid://bic1d73gy8q8s" path="res://graphics/cooking/Bg/Overlay light layer for completed.png" id="27_j65sc"]
+[ext_resource type="FontFile" uid="uid://dixbpuyvwixp8" path="res://graphics/fonts/PixeloidSans.ttf" id="28_lvm3g"]
+[ext_resource type="Script" uid="uid://cqqnm17lh7xnp" path="res://scenes/cooking/scene/back_button.gd" id="29_oichw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjdud"]
+size = Vector2(659.28516, 80)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2gep"]
+texture = ExtResource("7_bay3k")
+region_rect = Rect2(435, 505, 410, 110)
+modulate_color = Color(1, 1, 1, 0.3019608)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8jbwo"]
+texture = ExtResource("7_bay3k")
+modulate_color = Color(1, 1, 1, 0.43137255)
+
+[sub_resource type="Animation" id="Animation_j65sc"]
+resource_name = "Dodol Serve"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dodol:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(672, 622), Vector2(1330, 1156), Vector2(1682, 1488)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dodol:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(624, 229), Vector2(295, -173), Vector2(119, -339)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_lvm3g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dodol:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(672, 622)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dodol:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(661, 210)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Back Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oichw"]
+_data = {
+&"Dodol Serve": SubResource("Animation_j65sc"),
+&"RESET": SubResource("Animation_lvm3g")
+}
+
+[node name="Cooking UI" type="Control" unique_id=1506373966]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cybs6")
+
+[node name="Kitchen" type="NinePatchRect" parent="." unique_id=1977426102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b4kwo")
+
+[node name="Start Cooking" type="Button" parent="." unique_id=1316691313]
+modulate = Color(1, 1, 1, 0.16862746)
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cooking Dialogue" parent="." unique_id=904276033 instance=ExtResource("2_8jbwo")]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 40.0
+offset_bottom = 43.0
+
+[node name="Pot Cooking" type="CanvasLayer" parent="." unique_id=1447040644]
+visible = false
+
+[node name="IngredientSpawner" type="Control" parent="Pot Cooking" unique_id=1640140926]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_8dkaq")
+ingredient_scene = ExtResource("9_jbwc3")
+
+[node name="spawn_left" type="Control" parent="Pot Cooking/IngredientSpawner" unique_id=983715029]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -45.0
+offset_right = 12.0
+offset_bottom = -5.0
+grow_vertical = 2
+
+[node name="spawn_right" type="Control" parent="Pot Cooking/IngredientSpawner" unique_id=2126977450]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -20.0
+offset_right = -386.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Up" type="BoxContainer" parent="Pot Cooking" unique_id=130796555]
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 16.0
+offset_top = 96.0
+offset_right = 16.0
+offset_bottom = 96.0
+grow_horizontal = 2
+scale = Vector2(2.3600001, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pot Cooking/Up" unique_id=1093530379]
+
+[node name="ColissionShape2D" type="CollisionShape2D" parent="Pot Cooking/Up/StaticBody2D" unique_id=1911768992]
+shape = SubResource("RectangleShape2D_cjdud")
+
+[node name="Right" type="BoxContainer" parent="Pot Cooking" unique_id=735596695]
+z_index = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_right = -290.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pot Cooking/Right" unique_id=1273624344]
+
+[node name="Right" type="CollisionShape2D" parent="Pot Cooking/Right/StaticBody2D" unique_id=171376399]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_cjdud")
+
+[node name="Left" type="BoxContainer" parent="Pot Cooking" unique_id=1968949041]
+z_index = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 670.0
+offset_right = 670.0
+grow_vertical = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pot Cooking/Left" unique_id=630555805]
+position = Vector2(-6.1035156e-05, 0)
+
+[node name="Left" type="CollisionShape2D" parent="Pot Cooking/Left/StaticBody2D" unique_id=1346005204]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_cjdud")
+
+[node name="Bottom" type="BoxContainer" parent="Pot Cooking" unique_id=867745449]
+z_index = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pot Cooking/Bottom" unique_id=1809222501]
+
+[node name="Bottom" type="CollisionShape2D" parent="Pot Cooking/Bottom/StaticBody2D" unique_id=713555726]
+z_index = 2
+shape = SubResource("RectangleShape2D_cjdud")
+
+[node name="Stove" type="NinePatchRect" parent="Pot Cooking" unique_id=1028993778]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kac3s")
+region_rect = Rect2(0, 0, 1280, 720)
+
+[node name="Stove Button" type="Button" parent="Pot Cooking" unique_id=922329271]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 398.0
+offset_top = -235.0
+offset_right = 504.0
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_p2gep")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8jbwo")
+
+[node name="Pot Back" type="NinePatchRect" parent="Pot Cooking" unique_id=436429615]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_jmptp")
+
+[node name="Pot Ingredients" type="NinePatchRect" parent="Pot Cooking" unique_id=377434060]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pot Front" type="NinePatchRect" parent="Pot Cooking" unique_id=169786898]
+z_index = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_8dkaq")
+
+[node name="Pot Zone" parent="Pot Cooking" unique_id=308219330 instance=ExtResource("7_b7h0w")]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -147.5
+offset_right = 146.0
+offset_bottom = 147.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4000013, 1)
+mouse_filter = 2
+
+[node name="Debug" type="Panel" parent="Pot Cooking/Pot Zone" unique_id=2146637145]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Laddle" parent="Pot Cooking" unique_id=533098428 instance=ExtResource("2_cjdud")]
+position = Vector2(1099, 423.00003)
+scale = Vector2(3.719998, 3.8562844)
+
+[node name="Show Laddle" type="Button" parent="Pot Cooking" unique_id=244233211]
+modulate = Color(1, 1, 1, 0.13725491)
+z_index = 6
+offset_left = 1563.0
+offset_right = 1728.0
+offset_bottom = 265.0
+
+[node name="Proceed Button" type="Button" parent="Pot Cooking" unique_id=295621100]
+visible = false
+modulate = Color(1, 1, 1, 0.11372549)
+offset_left = 577.0
+offset_top = 423.0
+offset_right = 1354.0
+offset_bottom = 822.0
+text = "wwwwwwwwww"
+
+[node name="Debug" type="CanvasLayer" parent="." unique_id=886343335]
+visible = false
+
+[node name="Sugar" parent="Debug" unique_id=1954796269 instance=ExtResource("9_jbwc3")]
+visible = false
+z_index = 10
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -20.0
+offset_right = 54.0
+offset_bottom = 460.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_hccjc")
+
+[node name="Coconut Milk" parent="Debug" unique_id=114508407 instance=ExtResource("9_jbwc3")]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -45.0
+offset_right = 452.0
+offset_bottom = 435.0
+grow_vertical = 2
+texture = ExtResource("12_jbwc3")
+
+[node name="Done canvas" type="CanvasLayer" parent="." unique_id=183337665]
+visible = false
+script = ExtResource("14_puotp")
+
+[node name="Banana Leaf" type="TextureRect" parent="Done canvas" unique_id=875565153]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -394.0
+offset_right = -394.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("15_8jbwo")
+
+[node name="Dodol on banana" type="TextureRect" parent="Done canvas" unique_id=1207281115]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -366.0
+offset_top = 91.0
+offset_right = -366.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_w2yrx")
+
+[node name="Pot Back" type="TextureRect" parent="Done canvas" unique_id=1464354530]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1527.0
+offset_top = -515.0
+offset_right = 393.0
+offset_bottom = 565.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_jmptp")
+flip_h = true
+
+[node name="Laddle With Dodol" type="NinePatchRect" parent="Done canvas" unique_id=2017494192]
+visible = false
+z_index = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1536.0
+offset_top = -458.0
+offset_right = -1496.0
+offset_bottom = -418.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(48, 27)
+mouse_filter = 1
+texture = ExtResource("19_k6lov")
+script = ExtResource("17_puotp")
+
+[node name="Dodol only" type="NinePatchRect" parent="Done canvas" unique_id=1995786998]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1536.0
+offset_top = -516.0
+offset_right = -1496.0
+offset_bottom = -476.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(48, 27)
+texture = ExtResource("16_w2yrx")
+
+[node name="Pot Front" type="TextureRect" parent="Done canvas" unique_id=934942138]
+visible = false
+z_index = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1527.0
+offset_top = -515.0
+offset_right = 393.0
+offset_bottom = 565.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("15_8dkaq")
+flip_h = true
+
+[node name="Dodol Banana plate" type="TextureRect" parent="Done canvas" unique_id=1307399881]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_bay3k")
+
+[node name="Fold Dodol" type="Button" parent="Done canvas" unique_id=1770690863]
+visible = false
+modulate = Color(1, 1, 1, 0.12156863)
+offset_left = 627.0
+offset_top = 550.0
+offset_right = 1315.0
+offset_bottom = 910.0
+script = ExtResource("21_p2gep")
+
+[node name="Knife" type="NinePatchRect" parent="Done canvas" unique_id=1837925313]
+visible = false
+z_index = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -540.0
+offset_right = -1880.0
+offset_bottom = -500.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(48, 27)
+mouse_filter = 1
+texture = ExtResource("22_xk7km")
+script = ExtResource("23_cij8f")
+
+[node name="Banana Zone" parent="Done canvas" unique_id=2065970463 instance=ExtResource("7_b7h0w")]
+visible = false
+z_index = 20
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 276.00006
+offset_top = -20.0
+offset_right = 762.00006
+offset_bottom = 275.0
+grow_vertical = 2
+scale = Vector2(1.4000013, 1)
+mouse_filter = 2
+script = ExtResource("16_k6lov")
+
+[node name="Debug" type="Panel" parent="Done canvas/Banana Zone" unique_id=760858479]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Cut Zone" parent="Done canvas" unique_id=1015292497 instance=ExtResource("7_b7h0w")]
+visible = false
+z_index = 21
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.599365
+offset_top = -33.0
+offset_right = 66.68579
+offset_bottom = 367.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4000013, 1)
+mouse_filter = 2
+script = ExtResource("24_dd0j8")
+
+[node name="Debug" type="Panel" parent="Done canvas/Cut Zone" unique_id=190356642]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Dodol Serve Canvas" type="CanvasLayer" parent="." unique_id=68429479]
+visible = false
+script = ExtResource("25_nev20")
+
+[node name="Overlay" type="NinePatchRect" parent="Dodol Serve Canvas" unique_id=1906972151]
+modulate = Color(0.6872149, 0.68721503, 0.6872149, 0.7372549)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("27_j65sc")
+
+[node name="Dodol" type="NinePatchRect" parent="Dodol Serve Canvas" unique_id=1878361867]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -330.0
+offset_right = 373.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_j3wvt")
+
+[node name="Back Button" type="Button" parent="Dodol Serve Canvas" unique_id=2041076897]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -67.5
+offset_top = -45.0
+offset_right = 67.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("28_lvm3g")
+theme_override_font_sizes/font_size = 30
+text = "Go Back"
+script = ExtResource("29_oichw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dodol Serve Canvas" unique_id=910336023]
+libraries/ = SubResource("AnimationLibrary_oichw")
+
+[connection signal="pressed" from="Start Cooking" to="." method="_on_start_cooking_pressed"]
+[connection signal="pressed" from="Pot Cooking/Stove Button" to="." method="_on_stove_button_pressed"]
+[connection signal="pressed" from="Pot Cooking/Show Laddle" to="." method="_on_spawn_laddle_pressed"]
+[connection signal="pressed" from="Pot Cooking/Proceed Button" to="." method="_on_proceed_button_pressed"]
+[connection signal="pressed" from="Done canvas/Fold Dodol" to="Done canvas/Fold Dodol" method="_on_pressed"]
+[connection signal="pressed" from="Dodol Serve Canvas/Back Button" to="Dodol Serve Canvas/Back Button" method="_on_pressed"]

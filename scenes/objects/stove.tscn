@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://co61rcqx7stgv"]
+
+[ext_resource type="Script" uid="uid://xjmjcuud3mne" path="res://src/objects/stove.gd" id="1_stove"]
+[ext_resource type="Texture2D" uid="uid://cnda4p5860ihp" path="res://graphics/icons/Untitled1107_20260323201539.png" id="2_qdgw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stove"]
+size = Vector2(16, 16)
+
+[node name="Stove" type="StaticBody2D" unique_id=1909510697]
+collision_layer = 12
+collision_mask = 0
+script = ExtResource("1_stove")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1127403670]
+position = Vector2(6.000001, -4)
+scale = Vector2(0.29079497, 0.2763378)
+texture = ExtResource("2_qdgw4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2063493012]
+shape = SubResource("RectangleShape2D_stove")

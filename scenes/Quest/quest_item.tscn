@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cf4050aqfyy67"]
+
+[ext_resource type="Script" uid="uid://c0jby6qyhvs6b" path="res://src/resources/quest_item.gd" id="1_fkoqt"]
+[ext_resource type="Texture2D" uid="uid://bsx0onkeirxbt" path="res://graphics/icons/corn.png" id="2_60wrn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ogfe"]
+radius = 6.0827627
+
+[node name="QuestItem" type="Area2D" unique_id=1838234129]
+script = ExtResource("1_fkoqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1652607492]
+position = Vector2(-1.4305115e-06, 1)
+scale = Vector2(0.96428573, 0.89285725)
+texture = ExtResource("2_60wrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1622486537]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_1ogfe")

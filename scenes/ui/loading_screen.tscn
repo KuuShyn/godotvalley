@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cjshrx0guk6ps"]
+
+[ext_resource type="Script" uid="uid://d4h8pjj6mfcwr" path="res://src/ui/loading_screen.gd" id="1_rqdcv"]
+[ext_resource type="Texture2D" uid="uid://cm48pcfmfbinj" path="res://graphics/icons/background_loading.PNG" id="2_q4fso"]
+
+[node name="LoadingScreen" type="CanvasLayer" unique_id=379391142]
+script = ExtResource("1_rqdcv")
+
+[node name="Control" type="Control" parent="." unique_id=796393084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=80029986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_q4fso")
+
+[node name="Label" type="Label" parent="Control/TextureRect" unique_id=1491992845]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -11.5
+offset_right = 39.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Loading...."

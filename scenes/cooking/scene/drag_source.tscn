@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfxqtcsrehd88"]
+
+[ext_resource type="Script" uid="uid://duvjc85diooni" path="res://scenes/cooking/script/drag_source.gd" id="1_25xnb"]
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=114508407]
+z_index = 2
+custom_minimum_size = Vector2(480, 480)
+offset_right = 480.0
+offset_bottom = 480.0
+script = ExtResource("1_25xnb")
+
+[node name="Drag Source" type="TextureRect" parent="." unique_id=1954796269]
+z_index = 1
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 480.0

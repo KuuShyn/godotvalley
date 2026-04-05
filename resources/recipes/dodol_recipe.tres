@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeResource" format=3 uid="uid://d24jsmjjd1m6v"]
+
+[ext_resource type="Script" uid="uid://cc22sht78cahl" path="res://src/resources/recipe_resource.gd" id="1_abcde"]
+
+[resource]
+script = ExtResource("1_abcde")
+name = "Maguindanao Dodol"
+ingredients = {
+12: 1,
+13: 1,
+14: 1,
+15: 1
+}
+result_item = 16
+difficulty_modifier = 1.5

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://c3lawq4n66wbw"]
+
+[ext_resource type="Texture2D" uid="uid://c6lto7236wpxt" path="res://graphics/ui/Ellipse 1.png" id="1_e2o6t"]
+[ext_resource type="Shader" uid="uid://co40tvpq0owo1" path="res://shaders/meter.gdshader" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://cec5j1cajhwg0" path="res://graphics/ui/Arrow 1.png" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://b04bru8gjwipc" path="res://src/ui/cooking.gd" id="3_feb5d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fc0e3"]
+shader = ExtResource("2_fc0e3")
+shader_parameter/GREEN_MIN = 0.0
+shader_parameter/GREEN_MAX = 1.0
+shader_parameter/YELLOW_MIN = 0.35
+shader_parameter/YELLOW_MAX = 0.65
+shader_parameter/RED_MIN = 0.2
+shader_parameter/RED_MAX = 0.8
+
+[node name="Control" type="Control" unique_id=630825571]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cooking" type="Node" parent="." unique_id=7215756 node_paths=PackedStringArray("arrow", "meter", "points_display")]
+script = ExtResource("3_feb5d")
+arrow = NodePath("../Arrow")
+meter = NodePath("../Meter")
+points_display = NodePath("../Label")
+
+[node name="Meter" type="TextureRect" parent="." unique_id=1127484373]
+material = SubResource("ShaderMaterial_fc0e3")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.05646
+offset_top = -96.75
+offset_right = 182.05646
+offset_bottom = 96.75
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e2o6t")
+
+[node name="Arrow" type="TextureRect" parent="." unique_id=944216475]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -92.0
+offset_right = 20.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset = Vector2(20, 192)
+texture = ExtResource("2_feb5d")
+
+[node name="Button" type="Button" parent="." unique_id=1900162772]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = 165.0
+offset_right = 15.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+
+[node name="start" type="Button" parent="." unique_id=102055535]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = 243.0
+offset_right = 15.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Minigame"
+
+[node name="Label" type="Label" parent="." unique_id=812064212]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[connection signal="button_down" from="Button" to="Cooking" method="button_down"]
+[connection signal="button_up" from="Button" to="Cooking" method="button_up"]
+[connection signal="pressed" from="start" to="Cooking" method="start_minigame"]

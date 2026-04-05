@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeResource" format=3 uid="uid://cnp0rmiqkpke6"]
+
+[ext_resource type="Script" uid="uid://cc22sht78cahl" path="res://src/resources/recipe_resource.gd" id="1_a13uu"]
+
+[resource]
+script = ExtResource("1_a13uu")
+name = "Marinao Palapa"
+result_item = 20
+ingredients = {
+17: 1,
+18: 1,
+19: 1
+}
+difficulty_modifier = 2.0
+metadata/_custom_type_script = "uid://cc22sht78cahl"

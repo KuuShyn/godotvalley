@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://ctqtqy3831iul"]
+
+[ext_resource type="Script" uid="uid://c68vyt7tstmyw" path="res://src/ui/main_menu.gd" id="1_ipf6y"]
+[ext_resource type="Texture2D" uid="uid://w5kapm3owvkv" path="res://graphics/icons/background_first.png" id="1_ysryj"]
+[ext_resource type="Texture2D" uid="uid://bt750jy6eebd6" path="res://graphics/icons/start.png" id="2_ipf6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jvjsv"]
+texture = ExtResource("1_ysryj")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_jkd7f"]
+
+[node name="MainMenu" type="Control" unique_id=1071698342]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ipf6y")
+
+[node name="Panel" type="Panel" parent="." unique_id=185273568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -937.0
+offset_top = -524.0
+offset_right = 942.0
+offset_bottom = 523.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jvjsv")
+
+[node name="Button" type="Button" parent="." unique_id=1985172776]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -920.0
+offset_top = -214.0
+offset_right = -408.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxLine_jkd7f")
+icon = ExtResource("2_ipf6y")
+flat = true
+alignment = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

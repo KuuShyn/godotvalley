@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://pr45ch1s31d4"]
+
+[ext_resource type="Script" uid="uid://36ggr6psvtee" path="res://src/characters/grandma.gd" id="1_1v723"]
+[ext_resource type="Texture2D" uid="uid://cth8inb3w8ruo" path="res://graphics/characters/main/Grandma.png" id="2_5nequ"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24a8d"]
+size = Vector2(12, 10)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1874657296 groups=["npc"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_1v723")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=30899237]
+texture = ExtResource("2_5nequ")
+hframes = 4
+vframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=163535730]
+shape = SubResource("RectangleShape2D_24a8d")

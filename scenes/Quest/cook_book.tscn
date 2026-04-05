@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://b1300iiouja2t"]
+
+[ext_resource type="Script" uid="uid://eklpryhaqp3g" path="res://src/Quest/cook_book.gd" id="1_rd80m"]
+[ext_resource type="Resource" path="res://resources/recipes/dodol_recipe.tres" id="2_7a348"]
+[ext_resource type="Texture2D" uid="uid://bqlqpftb5r0ju" path="res://graphics/icons/Book.png" id="2_kbj74"]
+[ext_resource type="Texture2D" uid="uid://dxdhxjsvjth34" path="res://graphics/icons/Large flat.png" id="3_gdeiu"]
+[ext_resource type="Texture2D" uid="uid://dou7n6jdke5rq" path="res://graphics/icons/Image bg.png" id="4_lhqjw"]
+[ext_resource type="Texture2D" uid="uid://davx5vjryisy" path="res://graphics/icons/Food bg.png" id="5_pbjcm"]
+[ext_resource type="Texture2D" uid="uid://djf2vgcnm4uum" path="res://graphics/icons/Large flat devider.png" id="6_e6ddc"]
+[ext_resource type="Texture2D" uid="uid://u825c4b7d2nf" path="res://graphics/icons/Dodol.png" id="6_gdeiu"]
+[ext_resource type="FontFile" uid="uid://blkgn82vakhsf" path="res://graphics/fonts/Better VCR 9.0.1.ttf" id="7_kbj74"]
+[ext_resource type="Texture2D" uid="uid://cc666bfw8sr63" path="res://graphics/icons/Coconut milk.png" id="9_e6ddc"]
+[ext_resource type="Texture2D" uid="uid://dwstyb6frofke" path="res://graphics/icons/Muscuvado sugar.png" id="10_7a348"]
+[ext_resource type="Texture2D" uid="uid://c7oa8ehpjkjdp" path="res://graphics/icons/Pandan.png" id="11_i8aur"]
+[ext_resource type="Texture2D" uid="uid://dqjgkwinx280w" path="res://graphics/icons/Rice flour.png" id="12_s6dhn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i8aur"]
+load_path = "res://.godot/imported/Large flat shadowed.png-e511e7980db63dcf7e24b64630a68ce3.ctex"
+
+[node name="Cook Book" type="Control" unique_id=535296674]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rd80m")
+dodol_recipe = ExtResource("2_7a348")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039636684]
+layer = 2
+
+[node name="BookFrame" type="NinePatchRect" parent="CanvasLayer" unique_id=439355838]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kbj74")
+region_rect = Rect2(51, 62.5, 183, 121)
+
+[node name="RecipeBg1" type="NinePatchRect" parent="CanvasLayer/BookFrame" unique_id=239156085]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.48900002
+anchor_right = 0.28
+anchor_bottom = 0.48900002
+offset_left = -322.59998
+offset_top = -385.12
+offset_right = 324.40002
+offset_bottom = 385.88
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_gdeiu")
+region_rect = Rect2(73.99884, 82.93746, 55.09604, 78.18745)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=873527134]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.263
+anchor_right = 0.28
+anchor_bottom = 0.263
+offset_left = -180.16
+offset_top = -204.77301
+offset_right = 463.84
+offset_bottom = 81.22699
+texture = ExtResource("4_lhqjw")
+region_rect = Rect2(74.07377, 83.014496, 54.840843, 27.93367)
+
+[node name="FoodIconFrame" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1/NinePatchRect2" unique_id=212615207]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -134.0
+offset_right = -66.0
+offset_bottom = 132.0
+texture = ExtResource("5_pbjcm")
+region_rect = Rect2(75.03109, 84.022736, 27.965675, 25.842865)
+
+[node name="Button" type="Button" parent="CanvasLayer/BookFrame/RecipeBg1/NinePatchRect2/FoodIconFrame" unique_id=932240835]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49
+anchor_top = 0.508
+anchor_right = 0.49
+anchor_bottom = 0.508
+offset_left = -111.07001
+offset_top = -125.128006
+offset_right = 114.93
+offset_bottom = 121.871994
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/icon = ExtResource("6_gdeiu")
+expand_icon = true
+
+[node name="Recipes" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=1098093760]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.683
+anchor_right = 0.5
+anchor_bottom = 0.683
+offset_left = -323.5
+offset_top = -242.59302
+offset_right = 322.5
+offset_bottom = 239.40698
+texture = SubResource("CompressedTexture2D_i8aur")
+region_rect = Rect2(73.95006, 82.97397, 55.089493, 78.04636)
+
+[node name="border" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1/Recipes" unique_id=1478540748]
+layout_mode = 0
+offset_left = 204.0
+offset_top = -2.0
+offset_right = 211.0
+offset_bottom = 479.0
+texture = ExtResource("6_e6ddc")
+region_rect = Rect2(95.99676, 111.95508, 1.034317, 48.02919)
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=786416258]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.702
+anchor_top = 0.18
+anchor_right = 0.702
+anchor_bottom = 0.18
+offset_left = -187.194
+offset_top = -68.78
+offset_right = 186.806
+offset_bottom = 68.22
+theme_override_colors/font_color = Color(0.5006922, 0.2861316, 0.14004192, 1)
+theme_override_fonts/font = ExtResource("7_kbj74")
+theme_override_font_sizes/font_size = 70
+text = "DODOL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coconute Milk" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=1634480196]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45900002
+anchor_top = 0.57100004
+anchor_right = 0.45900002
+anchor_bottom = 0.57100004
+offset_left = -57.973022
+offset_top = -72.24103
+offset_right = 90.02698
+offset_bottom = 79.75897
+texture = ExtResource("9_e6ddc")
+
+[node name="coconut milk" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1/Coconute Milk" unique_id=210237298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40500003
+anchor_top = 1.0
+anchor_right = 0.40500003
+anchor_bottom = 1.0
+offset_left = -50.940006
+offset_top = -14.0
+offset_right = 51.059994
+offset_bottom = 9.0
+text = "Coconut Milk"
+
+[node name="Ingridients" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=1031941530]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 295.0
+offset_right = 601.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.96785015, 0.64504045, 0.455337, 1)
+theme_override_fonts/font = ExtResource("7_kbj74")
+theme_override_font_sizes/font_size = 36
+text = "INGRIDIENTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Muscuvado Sugar" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=878752932]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78400004
+anchor_top = 0.569
+anchor_right = 0.78400004
+anchor_bottom = 0.569
+offset_left = -74.24802
+offset_top = -75.699005
+offset_right = 73.75198
+offset_bottom = 76.300995
+texture = ExtResource("10_7a348")
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1/Muscuvado Sugar" unique_id=514485245]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.537
+anchor_top = 1.016
+anchor_right = 0.537
+anchor_bottom = 1.016
+offset_left = -68.476
+offset_top = -11.432007
+offset_right = 68.524
+offset_bottom = 11.567993
+text = "Muscuvado Sugar"
+
+[node name="Pandan" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=1299297536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77900004
+anchor_top = 0.82100004
+anchor_right = 0.77900004
+anchor_bottom = 0.82100004
+offset_left = -74.01303
+offset_top = -75.99103
+offset_right = 73.98697
+offset_bottom = 76.00897
+texture = ExtResource("11_i8aur")
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1/Pandan" unique_id=2146852890]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 1.0300001
+anchor_right = 0.517
+anchor_bottom = 1.0300001
+offset_left = -29.516006
+offset_top = -11.560013
+offset_right = 29.483994
+offset_bottom = 11.439987
+text = "Pandan"
+
+[node name="Rice Flour" type="NinePatchRect" parent="CanvasLayer/BookFrame/RecipeBg1" unique_id=1169342452]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 0.82900006
+anchor_right = 0.462
+anchor_bottom = 0.82900006
+offset_left = -73.914
+offset_top = -76.15906
+offset_right = 74.086
+offset_bottom = 75.84094
+texture = ExtResource("12_s6dhn")
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg1/Rice Flour" unique_id=2012669044]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48000002
+anchor_top = 1.0
+anchor_right = 0.48000002
+anchor_bottom = 1.0
+offset_left = -38.04
+offset_top = -13.0
+offset_right = 37.96
+offset_bottom = 10.0
+text = "Rice Flour"
+
+[node name="RecipeBg2" type="NinePatchRect" parent="CanvasLayer/BookFrame" unique_id=116933940]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.5
+anchor_right = 0.726
+anchor_bottom = 0.5
+offset_left = -324.92004
+offset_top = -390.0
+offset_right = 326.07996
+offset_bottom = 375.0
+texture = ExtResource("3_gdeiu")
+region_rect = Rect2(74.048805, 83.033165, 54.970543, 78.03663)
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg2" unique_id=857658656]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.223
+anchor_right = 0.5
+anchor_bottom = 0.223
+offset_left = -320.5
+offset_top = -151.595
+offset_right = 322.5
+offset_bottom = 628.405
+theme_override_colors/font_color = Color(0.5019608, 0.28627452, 0.14117648, 1)
+theme_override_fonts/font = ExtResource("7_kbj74")
+theme_override_font_sizes/font_size = 16
+text = "Traditional Maguindanao Dodol is a beloved sweet delicacy from the Maguindanao communities of Mindanao, Philippines, known for its rich caramel flavor, fragrant pandan aroma, and chewy texture shaped by hours of patient stirring. Its roots can be traced to early Maritime Southeast Asian trading cultures, where coastal communities in present-day Indonesia, Malaysia, and Brunei developed similar sticky rice sweets using palm sugar, coconut milk, and glutinous rice that spread across islands through cultural exchange. In southern Philippines, Moro communities adapted the recipe and gave it deeper meaning, making dodol an essential food during Eid celebrations, weddings, harvest gatherings, and the welcoming of honored guests. Families and neighbors traditionally gather around one large wok to stir the mixture together, transforming cooking into a shared ritual of storytelling, cooperation, and prayer that strengthens social bonds. Beyond celebration, dodol also reflects practical wisdom, as its energy-rich ingredients once helped sustain people during fasting periods and long journeys. Today, its deep brown color from caramelized palm sugar, sticky consistency from gelatinized rice starch, and warm aroma from pandan leaves continue to symbolize patience, unity, and living cultural heritage passed lovingly from one generation to the next. "
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/BookFrame/RecipeBg1/NinePatchRect2/FoodIconFrame/Button" to="." method="_on_button_pressed"]

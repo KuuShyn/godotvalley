@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b6h7wuml6emog"]
+
+[sub_resource type="GDScript" id="GDScript_brulj"]
+script/source = "extends NinePatchRect
+
+@export var texture_to_spawn: Texture2D
+@export var target_slot: NinePatchRect
+
+func _ready():
+	mouse_filter = Control.MOUSE_FILTER_PASS
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	# Also check that source actually has a texture
+	return data is NinePatchRect and data.texture != null
+
+func _drop_data(at_position: Vector2, data: Variant):
+	var source = data as NinePatchRect
+	
+	
+	# Clear source AFTER copying
+	source.texture = null
+	
+	# Spawn on target
+	if target_slot and texture_to_spawn:
+		target_slot.texture = texture_to_spawn
+"
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=355829313]
+offset_right = 490.0
+offset_bottom = 210.0
+script = SubResource("GDScript_brulj")
+
+[node name="Debug" type="Panel" parent="." unique_id=1612225161]
+modulate = Color(1, 1, 1, 0.15294118)
+show_behind_parent = true
+layout_mode = 0
+offset_right = 486.0
+offset_bottom = 212.0
+mouse_filter = 2

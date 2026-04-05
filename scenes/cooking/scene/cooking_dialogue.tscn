@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://ckeawllbv84bk"]
+
+[ext_resource type="Texture2D" uid="uid://bonom2m2wc48o" path="res://graphics/cooking/Chat/pink.png" id="1_pquot"]
+[ext_resource type="Script" uid="uid://bwxhbqk8guriw" path="res://scenes/cooking/script/cooking_dialogue.gd" id="1_snuk4"]
+[ext_resource type="FontFile" uid="uid://blkgn82vakhsf" path="res://graphics/fonts/Better VCR 9.0.1.ttf" id="3_ofs3b"]
+[ext_resource type="Texture2D" uid="uid://de2o3yq0nuwo4" path="res://graphics/cooking/Chat/blue.png" id="3_uk4u2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snuk4"]
+texture = ExtResource("1_pquot")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+region_rect = Rect2(25, 25, 300, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pquot"]
+texture = ExtResource("3_uk4u2")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+region_rect = Rect2(25, 145, 300, 100)
+
+[node name="Cooking Dialogue" type="Control" unique_id=904276033]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_snuk4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1116154230]
+layout_mode = 1
+offset_right = 770.0
+offset_bottom = 238.0
+theme_override_constants/separation = 40
+
+[node name="Pink" type="PanelContainer" parent="VBoxContainer" unique_id=1821197198]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_snuk4")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Pink" unique_id=1871046988]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="VBoxContainer/Pink/MarginContainer" unique_id=925508671]
+custom_minimum_size = Vector2(746, 49)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ofs3b")
+theme_override_font_sizes/font_size = 25
+text = "First, place the palm sugar and coconut milk into the wok. Add the tied pandan leaves."
+autowrap_mode = 3
+
+[node name="Blue" type="PanelContainer" parent="VBoxContainer" unique_id=1222461564]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pquot")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Blue" unique_id=397121899]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="VBoxContainer/Blue/MarginContainer" unique_id=1830409333]
+custom_minimum_size = Vector2(746, 49)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ofs3b")
+theme_override_font_sizes/font_size = 25
+text = "The pandan leaves release аромат compounds that spread through diffusion, giving that signature smell."
+autowrap_mode = 3

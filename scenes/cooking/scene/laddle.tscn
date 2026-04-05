@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cxc7scsx24xea"]
+
+[ext_resource type="Texture2D" uid="uid://bmxsirxjwtqgw" path="res://graphics/cooking/Tools/Untitled1154_20260331013259.png" id="1_3iulw"]
+[ext_resource type="Script" uid="uid://bxevqhl48n0ta" path="res://scenes/cooking/script/laddle.gd" id="2_84l80"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84l80"]
+radius = 24.77484
+height = 166.81659
+
+[node name="Laddle" type="CharacterBody2D" unique_id=1919247151]
+z_index = 1
+script = ExtResource("2_84l80")
+
+[node name="Laddle" type="NinePatchRect" parent="." unique_id=533098428]
+offset_left = -109.0
+offset_top = -70.0
+offset_right = 95.0
+offset_bottom = 78.0
+texture = ExtResource("1_3iulw")
+region_rect = Rect2(665, 25, 530, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2061698159]
+rotation = 0.9100644
+shape = SubResource("CapsuleShape2D_84l80")
+
+[node name="Button" type="Button" parent="." unique_id=991768993]
+modulate = Color(1, 1, 1, 0)
+offset_left = 30.512808
+offset_top = -64.69269
+offset_right = 89.51281
+offset_bottom = 70.16098
+rotation = 0.80584866
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

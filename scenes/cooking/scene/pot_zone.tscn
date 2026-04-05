@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dgbbysnsr2mmq"]
+
+[ext_resource type="Script" uid="uid://cfgklmsoekrxe" path="res://scenes/cooking/script/pot_zone.gd" id="1_onvii"]
+
+[node name="Drop Zone" type="Control" unique_id=308219330]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 486.0
+offset_bottom = 212.0
+script = ExtResource("1_onvii")

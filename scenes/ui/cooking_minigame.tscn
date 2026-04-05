@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bcck5tpoatgp8"]
+
+[ext_resource type="Script" uid="uid://dfja44s7pclfb" path="res://src/ui/cooking_minigame.gd" id="1_cmg"]
+[ext_resource type="Texture2D" uid="uid://dgumw45kjfkbn" path="res://graphics/ui/fish_frame.png" id="2_frame"]
+[ext_resource type="Texture2D" uid="uid://cpv12fur04hkk" path="res://graphics/ui/fish_progress_bg.png" id="3_bg"]
+[ext_resource type="Texture2D" uid="uid://big0akfwjmocq" path="res://graphics/ui/fish_progress.png" id="4_prog"]
+
+[node name="CookingMinigame" type="Control" unique_id=182257793]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -7.0
+offset_right = -8.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmg")
+
+[node name="UIContainer" type="HBoxContainer" parent="." unique_id=337182476]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -20.0
+offset_right = 60.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PatienceFrame" type="NinePatchRect" parent="UIContainer" unique_id=326012680]
+custom_minimum_size = Vector2(180, 40)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_frame")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 20
+
+[node name="PatienceBar" type="TextureProgressBar" parent="UIContainer/PatienceFrame" unique_id=235131972]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.0
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("3_bg")
+texture_progress = ExtResource("4_prog")
+tint_progress = Color(0.9, 0.4, 0.2, 1)
+
+[node name="SweetSpotIndicator" type="ColorRect" parent="UIContainer/PatienceFrame/PatienceBar" unique_id=348524605]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_right = 0.6
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 1, 0.1, 0.5)
+
+[node name="LeftBorder" type="ColorRect" parent="UIContainer/PatienceFrame/PatienceBar/SweetSpotIndicator" unique_id=1744126967]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_vertical = 2
+color = Color(1, 1, 1, 0.8)
+
+[node name="RightBorder" type="ColorRect" parent="UIContainer/PatienceFrame/PatienceBar/SweetSpotIndicator" unique_id=135249143]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(1, 1, 1, 0.8)
+
+[node name="CompletionFrame" type="NinePatchRect" parent="UIContainer" unique_id=464544388]
+custom_minimum_size = Vector2(40, 150)
+layout_mode = 2
+texture = ExtResource("2_frame")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 20
+
+[node name="CompletionBar" type="TextureProgressBar" parent="UIContainer/CompletionFrame" unique_id=1581655973]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -20.0
+step = 0.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("3_bg")
+texture_progress = ExtResource("4_prog")
+tint_progress = Color(0.56029713, 1.1012176, 1.3716779, 1)
+
+[node name="FamilyHelpButton" type="Button" parent="." unique_id=126797000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -120.0
+offset_right = 40.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help!"
