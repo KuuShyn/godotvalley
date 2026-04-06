@@ -1048,133 +1048,122 @@ position = Vector2(607, 505)
 position = Vector2(421, 717)
 
 [node name="SimpleObject" parent="Objects" unique_id=630993976 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(17, 201)
-size = 3
 
 [node name="SimpleObject3" parent="Objects" unique_id=247034899 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(47, 191)
-size = 2
+size = 3
+style = 0
 
 [node name="SimpleObject4" parent="Objects" unique_id=754677293 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(-37, 254)
+size = 2
+
+[node name="SimpleObject5" parent="Objects" unique_id=1451712631 instance=ExtResource("8_ouxo3")]
+position = Vector2(63, 240)
+
+[node name="SimpleObject6" parent="Objects" unique_id=1399886171 instance=ExtResource("8_ouxo3")]
+position = Vector2(-30, 238)
 size = 1
 style = 0
 
-[node name="SimpleObject5" parent="Objects" unique_id=1451712631 instance=ExtResource("8_ouxo3")]
-z_index = 0
-position = Vector2(63, 240)
-size = 3
-
-[node name="SimpleObject6" parent="Objects" unique_id=1399886171 instance=ExtResource("8_ouxo3")]
-z_index = 0
-position = Vector2(-30, 238)
-size = 2
+[node name="SimpleObject7" parent="Objects" unique_id=303612815 instance=ExtResource("8_ouxo3")]
+position = Vector2(-72, 311)
 style = 0
 
-[node name="SimpleObject7" parent="Objects" unique_id=303612815 instance=ExtResource("8_ouxo3")]
-z_index = 0
-position = Vector2(-72, 311)
-size = 2
-
 [node name="SimpleObject8" parent="Objects" unique_id=1311474539 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(-47, 365)
-size = 2
+size = 1
+style = 0
 
 [node name="SimpleObject9" parent="Objects" unique_id=1391680993 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(-90, 367)
-size = 2
+style = 0
 
 [node name="SimpleObject10" parent="Objects" unique_id=557814832 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(-79, 511)
-size = 3
+size = 2
 style = 0
 
 [node name="SimpleObject11" parent="Objects" unique_id=1064272023 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(-93, 503)
-size = 3
+size = 1
 
 [node name="SimpleObject12" parent="Objects" unique_id=1902547649 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(-24, 550)
-style = 0
+size = 2
 
 [node name="SimpleObject13" parent="Objects" unique_id=1405513449 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(-100, 548)
-size = 3
 
 [node name="SimpleObject14" parent="Objects" unique_id=811527849 instance=ExtResource("8_ouxo3")]
 position = Vector2(-81, 606)
-size = 1
-style = 0
 
 [node name="SimpleObject15" parent="Objects" unique_id=870952622 instance=ExtResource("8_ouxo3")]
 position = Vector2(-20, 645)
-size = 1
+style = 0
 
 [node name="SimpleObject16" parent="Objects" unique_id=2119237553 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(-35, 596)
-size = 2
+size = 1
 
 [node name="SimpleObject17" parent="Objects" unique_id=398207345 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(211, 650)
-size = 3
+size = 1
 style = 0
 
 [node name="SimpleObject18" parent="Objects" unique_id=2084747566 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(300, 661)
 size = 2
-style = 0
 
 [node name="SimpleObject19" parent="Objects" unique_id=2023429231 instance=ExtResource("8_ouxo3")]
 position = Vector2(240, 635)
 
 [node name="SimpleObject20" parent="Objects" unique_id=1738164016 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(340, 651)
-size = 3
+size = 1
 style = 0
 
 [node name="SimpleObject21" parent="Objects" unique_id=1915544835 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(321, 674)
-size = 2
+size = 3
 style = 0
 
 [node name="SimpleObject22" parent="Objects" unique_id=1386031566 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(446, 609)
-size = 3
+size = 1
 style = 0
 
 [node name="SimpleObject23" parent="Objects" unique_id=1863994223 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(417, 738)
-size = 1
+size = 2
 
 [node name="SimpleObject24" parent="Objects" unique_id=1091946563 instance=ExtResource("8_ouxo3")]
-z_index = 0
 position = Vector2(514, 645)
-size = 3
+size = 1
 
 [node name="SimpleObject25" parent="Objects" unique_id=2039759899 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(559, 607)
+size = 2
 
 [node name="SimpleObject26" parent="Objects" unique_id=381615360 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(542, 635)
-size = 1
+size = 2
 
 [node name="SimpleObject27" parent="Objects" unique_id=228203833 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(593, 527)
 size = 3
+style = 0
 
 [node name="SimpleObject28" parent="Objects" unique_id=666920272 instance=ExtResource("8_ouxo3")]
 z_index = 0
@@ -1185,15 +1174,17 @@ style = 0
 [node name="SimpleObject29" parent="Objects" unique_id=1423356600 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(667, 466)
-size = 2
+size = 3
 
 [node name="SimpleObject30" parent="Objects" unique_id=1265558022 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(686, 456)
-style = 0
+size = 2
 
 [node name="SimpleObject31" parent="Objects" unique_id=877668754 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(627, 249)
-style = 0
+size = 3
 
 [node name="SimpleObject32" parent="Objects" unique_id=843918571 instance=ExtResource("8_ouxo3")]
 position = Vector2(577, 173)
@@ -1203,22 +1194,25 @@ style = 0
 position = Vector2(619, 167)
 
 [node name="SimpleObject34" parent="Objects" unique_id=91599781 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(504, 165)
-style = 0
+size = 2
 
 [node name="SimpleObject35" parent="Objects" unique_id=766609564 instance=ExtResource("8_ouxo3")]
+z_index = 0
 position = Vector2(528, 134)
-style = 0
+size = 3
 
 [node name="SimpleObject36" parent="Objects" unique_id=2065567445 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(564, 130)
-size = 3
+size = 2
+style = 0
 
 [node name="SimpleObject37" parent="Objects" unique_id=1300724013 instance=ExtResource("8_ouxo3")]
 z_index = 0
 position = Vector2(667, 177)
-size = 2
+size = 3
 style = 0
 
 [node name="SimpleObject2" parent="Objects" unique_id=1980579541 instance=ExtResource("8_ouxo3")]
@@ -1345,6 +1339,23 @@ item_icon = ExtResource("23_xog87")
 position = Vector2(3, 224)
 collision_layer = 12
 collision_mask = 0
+
+[node name="Label" type="Label" parent="." unique_id=1281629062]
+offset_left = 102.0
+offset_top = 286.0
+offset_right = 197.0
+offset_bottom = 309.0
+text = "How To Play
+
+Go to stove inside the house
+Press *space* to open the cook book
+
+press *esc* to close cook book
+
+click the food icon to start cooking
+and just click2 stuffs
+
+while in cooking you cant leave until your done"
 
 [connection signal="build" from="Objects/Player" to="." method="_on_player_build"]
 [connection signal="close_shop" from="Objects/Player" to="." method="_on_player_close_shop"]

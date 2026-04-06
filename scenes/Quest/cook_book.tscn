@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1300iiouja2t"]
 
 [ext_resource type="Script" uid="uid://eklpryhaqp3g" path="res://src/Quest/cook_book.gd" id="1_rd80m"]
-[ext_resource type="Resource" path="res://resources/recipes/dodol_recipe.tres" id="2_7a348"]
+[ext_resource type="Resource" uid="uid://d24jsmjjd1m6v" path="res://resources/recipes/dodol_recipe.tres" id="2_7a348"]
 [ext_resource type="Texture2D" uid="uid://bqlqpftb5r0ju" path="res://graphics/icons/Book.png" id="2_kbj74"]
 [ext_resource type="Texture2D" uid="uid://dxdhxjsvjth34" path="res://graphics/icons/Large flat.png" id="3_gdeiu"]
 [ext_resource type="Texture2D" uid="uid://dou7n6jdke5rq" path="res://graphics/icons/Image bg.png" id="4_lhqjw"]
@@ -285,7 +285,99 @@ offset_bottom = 628.405
 theme_override_colors/font_color = Color(0.5019608, 0.28627452, 0.14117648, 1)
 theme_override_fonts/font = ExtResource("7_kbj74")
 theme_override_font_sizes/font_size = 16
-text = "Traditional Maguindanao Dodol is a beloved sweet delicacy from the Maguindanao communities of Mindanao, Philippines, known for its rich caramel flavor, fragrant pandan aroma, and chewy texture shaped by hours of patient stirring. Its roots can be traced to early Maritime Southeast Asian trading cultures, where coastal communities in present-day Indonesia, Malaysia, and Brunei developed similar sticky rice sweets using palm sugar, coconut milk, and glutinous rice that spread across islands through cultural exchange. In southern Philippines, Moro communities adapted the recipe and gave it deeper meaning, making dodol an essential food during Eid celebrations, weddings, harvest gatherings, and the welcoming of honored guests. Families and neighbors traditionally gather around one large wok to stir the mixture together, transforming cooking into a shared ritual of storytelling, cooperation, and prayer that strengthens social bonds. Beyond celebration, dodol also reflects practical wisdom, as its energy-rich ingredients once helped sustain people during fasting periods and long journeys. Today, its deep brown color from caramelized palm sugar, sticky consistency from gelatinized rice starch, and warm aroma from pandan leaves continue to symbolize patience, unity, and living cultural heritage passed lovingly from one generation to the next. "
+text = "
+Traditional Maguindanao Dodol is a beloved sweet delicacy from the Maguindanao communities of Mindanao, Philippines, known for its rich caramel flavor, fragrant pandan aroma, and chewy texture shaped by hours of patient stirring. Its roots can be traced to early Maritime Southeast Asian trading cultures, where coastal communities in present-day Indonesia, Malaysia, and Brunei developed similar sticky rice sweets using palm sugar, coconut milk, and glutinous rice that spread across islands through cultural exchange. In southern Philippines, Moro communities adapted the recipe and gave it deeper meaning, making dodol an essential food during Eid celebrations, weddings, harvest gatherings, and the welcoming of honored guests. Families and neighbors traditionally gather around one large wok to stir the mixture together, transforming cooking into a shared ritual of storytelling, cooperation, and prayer that strengthens social bonds. Beyond celebration, dodol also reflects practical wisdom, as its energy-rich ingredients once helped sustain people during fasting periods and long journeys. Today, its deep brown color from caramelized palm sugar, sticky consistency from gelatinized rice starch, and warm aroma from pandan leaves continue to symbolize patience, unity, and living cultural heritage passed lovingly from one generation to the next. "
 autowrap_mode = 2
 
+[node name="RecipeBg3" type="NinePatchRect" parent="CanvasLayer/BookFrame" unique_id=1207884917]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.5
+anchor_right = 0.726
+anchor_bottom = 0.5
+offset_left = -324.92004
+offset_top = -390.0
+offset_right = 326.07996
+offset_bottom = 375.0
+texture = ExtResource("3_gdeiu")
+region_rect = Rect2(74.048805, 83.033165, 54.970543, 78.03663)
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg3" unique_id=1067592807]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.223
+anchor_right = 0.5
+anchor_bottom = 0.223
+offset_left = -320.5
+offset_top = -151.595
+offset_right = 322.5
+offset_bottom = 628.405
+theme_override_colors/font_color = Color(0.5019608, 0.28627452, 0.14117648, 1)
+theme_override_fonts/font = ExtResource("7_kbj74")
+theme_override_font_sizes/font_size = 16
+text = "
+1. Dissolve the Sugar and Infuse the Pandan 
+Place 1 cup (200 g) chopped palm sugar and 1 cup (240 ml) first-extract coconut milk into a large wok. Add 2–3 pandan leaves (tied into a bundle). Stir slowly over low heat until the sugar dissolves completely (about 5–8 minutes). During this stage, heat energy increases the motion of sugar molecules, allowing them to break apart and mix evenly with the coconut milk, while pandan releases aromatic compounds that diffuse into the liquid. 
+
+2. Add the Flour Batter 
+In a separate bowl, mix ¾ cup (90 g) glutinous rice flour with ½ cup (120 ml) water to form a smooth batter. Gradually pour this into the wok while continuously stirring (about 3–5 minutes) to prevent lumps. Constant motion ensures uniform suspension of particles, helping achieve a smooth texture. 
+"
+autowrap_mode = 2
+
+[node name="RecipeBg4" type="NinePatchRect" parent="CanvasLayer/BookFrame" unique_id=810657228]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.5
+anchor_right = 0.726
+anchor_bottom = 0.5
+offset_left = -324.92004
+offset_top = -390.0
+offset_right = 326.07996
+offset_bottom = 375.0
+texture = ExtResource("3_gdeiu")
+region_rect = Rect2(74.048805, 83.033165, 54.970543, 78.03663)
+
+[node name="Label" type="Label" parent="CanvasLayer/BookFrame/RecipeBg4" unique_id=1522132351]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.223
+anchor_right = 0.5
+anchor_bottom = 0.223
+offset_left = -320.5
+offset_top = -151.595
+offset_right = 322.5
+offset_bottom = 628.405
+theme_override_colors/font_color = Color(0.5019608, 0.28627452, 0.14117648, 1)
+theme_override_fonts/font = ExtResource("7_kbj74")
+theme_override_font_sizes/font_size = 16
+text = "
+3. Continuous Stirring (Gelatinization and Caramelization Phase) 
+Maintain steady stirring over low to medium heat for 30–45 minutes, or until the mixture thickens. The starch undergoes gelatinization, forming the sticky and chewy consistency, while the palm sugar undergoes caramelization, producing the deep brown color and rich flavor. Continuous stirring ensures even heat distribution and prevents burning. 
+
+4. Final Transfer 
+When the mixture pulls away from the sides of the pan, remove the pandan bundle and transfer the dodol onto a banana leaf-lined tray (around 6x6 inches). Let it cool for 20–30 minutes until it sets into a firm yet chewy texture. "
+autowrap_mode = 2
+
+[node name="PageButton" type="Button" parent="CanvasLayer/BookFrame" unique_id=86679220]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -180.0
+offset_right = -201.0
+offset_bottom = -149.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next Page"
+
 [connection signal="pressed" from="CanvasLayer/BookFrame/RecipeBg1/NinePatchRect2/FoodIconFrame/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/BookFrame/PageButton" to="." method="_on_page_button_pressed"]

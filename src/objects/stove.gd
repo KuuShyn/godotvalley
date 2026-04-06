@@ -7,6 +7,7 @@ const COOKING_UI = "res://scenes/cooking/scene/cooking_ui.tscn"
 
 # --- 2. VARIABLES ---
 var current_player: CharacterBody2D = null
+var transitioning := false
 
 # --- 3. THE INTERACTION ---
 func interact(player: CharacterBody2D) -> void:
@@ -15,6 +16,7 @@ func interact(player: CharacterBody2D) -> void:
 	
 	current_player = player
 	var book = cook_book_scene.instantiate()
+	book.tree_exited.connect(_on_book_closed)
 	
 	var canvas = get_tree().get_first_node_in_group("CanvasLayer")
 	if not canvas:
@@ -32,8 +34,14 @@ func interact(player: CharacterBody2D) -> void:
 	
 func _on_recipe_selected(recipe: RecipeResource) -> void:
 	# 1. Wait for the Cook Book to be fully gone
+	transitioning = true
 	await get_tree().process_frame
 	Functions.load_screen_to_scene(COOKING_UI, current_player)
+	
+
+func _on_book_closed() -> void:
+	if current_player and not transitioning:
+		current_player.current_state = Enum.State.DEFAULT
 	
 	
 # Commented Out
