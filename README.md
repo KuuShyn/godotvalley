@@ -1,3 +1,6 @@
+# Previous Dev
+@Youma
+
 # Godew Valley
 Godew Valley is a Godot 4 top-down farming sandbox with grid-based world logic, crop growth, item economy, machine automation, and minigame-based item generation.
 
